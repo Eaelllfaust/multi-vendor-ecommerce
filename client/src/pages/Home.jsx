@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import Heders from '../components/Headers'
+import Headers from '../components/Headers'
 import Banner from '../components/Banner'
 import Categorys from '../components/Categorys'
 import FeatureProducts from '../components/products/FeatureProducts'
 import Products from '../components/products/Products'
 import Footer from '../components/Footer'
+import { Button } from "../components/ui/button"
 import { get_category, get_products } from '../store/reducers/homeReducer'
 const Home = () => {
     const dispatch = useDispatch()
@@ -14,12 +15,14 @@ const Home = () => {
         dispatch(get_products())
     }, [])
     return (
-        <div className='w-full'>
-            <Heders />
+        <div className='dark w-full '>
+            <Headers />
             <Banner />
             <div className='my-4'>
                 <Categorys />
+                
             </div>
+
             <div className='py-[45px]'>
                 <FeatureProducts products={products} />
             </div>

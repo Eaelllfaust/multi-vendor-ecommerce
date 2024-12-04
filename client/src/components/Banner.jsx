@@ -33,23 +33,27 @@ const Banner = () => {
         dispatch(get_banners())
     }, [])
     return (
-        <div className='w-full md-lg:mt-6'>
-            <div className='w-[85%] lg:w-[90%] mx-auto'>
-                <div className='w-full flex flex-wrap md-lg:gap-8'>
+        <div className='w-full'>
+            <div className='w-[85%] lg:w-[90%] mx-auto br'>
+                <div className='w-full flex flex-wrap'>
                     <div className='w-full'>
-                        <div className='my-8'>
+                        <div className=''>
                             <Carousel
                                 autoPlay={true}
                                 infinite={true}
                                 arrows={true}
-                                showDots={true}
+                                showDots={false}
                                 responsive={responsive}
                             >
-                                {
-                                    banners && banners.length > 0 && banners.map((b, i) => <Link className='lg-md:h-[440px] h-auto w-full block' key={i} to={`/product/details/${b.link}`}>
-                                        <img className='w-full h-full' src={b.banner} alt="" />
-                                    </Link>)
-                                }
+                               
+                                     <Link className='lg-md:h-[440px] h-auto w-full block' >
+                                     <img className='nex_banner_img'   src="http://localhost:3001/images/banner/banner_nexigo_gray.svg" alt="" />
+                                    </Link>
+                                     <Link className='lg-md:h-[440px] h-auto w-full block' >
+                                     <img className='nex_banner_img'   src="http://localhost:3001/images/banner/banner_nexigo_primary.svg" alt="" />
+                                    </Link>
+
+                                
                             </Carousel>
                         </div>
                     </div>
