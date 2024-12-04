@@ -58,7 +58,7 @@ const Headers = () => {
             alt="logo"
           />
           <div className="w-8/12 pl-8 md-lg:pl-0 md-lg:w-full">
-            <div className="flex flex-wrap w-full justify-between items-center md-lg:gap-6">
+            <div className="flex flex-wrap w-full justify-center items-center md-lg:gap-6">
               <div className="w-8/12 md-lg:w-full">
                 <div className="flex h-[50px] items-center relative gap-5">
                   <div className="relative after:h-[25px]">

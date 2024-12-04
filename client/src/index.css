@@ -97,3 +97,10 @@ html{
     width: 100%;
     object-fit: cover;
 }
+
+
+.nex_well{
+    width: 60%;
+    justify-content: center;
+    display: flex;
+}

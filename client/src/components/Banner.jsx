@@ -59,7 +59,7 @@ const Banner = () => {
                 <Link className="lg-md:h-[440px] h-auto w-full block">
                   <img
                     className="nex_banner_img"
-                    src="http://localhost:3001/images/banner/banner_nexigo_gray.svg"
+                    src="http://localhost:3001/images/banner/banner_nexigo_gray_one.svg"
                     alt=""
                   />
                 </Link>
