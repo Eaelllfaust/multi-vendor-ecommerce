@@ -63,7 +63,7 @@ const Headers = () => {
                 <div className="flex h-[50px] items-center relative gap-5">
                   <div className="relative after:h-[25px]">
                     <Select onValueChange={(value) => setCategory(value)}>
-                      <SelectTrigger className="w-[130px] text-slate-100 font-semibold bg-transparent px-2 h-full outline-0 border-none">
+                      <SelectTrigger className="w-[120px] text-slate-100 font-semibold bg-transparent px-2 h-full outline-0 border-none">
                         <SelectValue placeholder="All Categories" />
                       </SelectTrigger>
                       <SelectContent className="nex_drop">
@@ -84,7 +84,7 @@ const Headers = () => {
                     className="w-full placeholder-white dark:bg-black text-slate-100 outline-0 px-3 h-full input_nex"
                     onChange={(e) => setSearchValue(e.target.value)}
                     type="text"
-                    placeholder="Search for products, merchants or categories"
+                    placeholder="Search for products, merchants"
                   />
                   <button
                     onClick={search}
