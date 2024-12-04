@@ -33,7 +33,7 @@ const CategoryShops = () => {
     }, [])
     useEffect(() => {
         setState({
-            values: [priceRange.low, priceRange.high === priceRange.low ? priceRange.high + 1 : priceRange.hight]
+            values: [priceRange.low, priceRange.high === priceRange.low ? priceRange.high + 1 : priceRange.high]
         })
     }, [priceRange])
 
@@ -90,7 +90,7 @@ const CategoryShops = () => {
                                 <Range
                                     step={1}
                                     min={priceRange.low}
-                                    max={priceRange.high === priceRange.low ? priceRange.high + 1 : priceRange.hight}
+                                    max={priceRange.high === priceRange.low ? priceRange.high + 1 : priceRange.high}
                                     values={state.values}
                                     onChange={(values) => setState({ values })}
                                     renderTrack={({ props, children }) => (

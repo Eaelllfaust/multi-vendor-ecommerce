@@ -16,9 +16,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 const Shops = () => {
 
-
     const { products, totalProduct, latest_product, categorys, priceRange, parPage } = useSelector(state => state.home)
-
     const dispatch = useDispatch()
     const [pageNumber, setPageNumber] = useState(1)
     const [styles, setStyles] = useState('grid')
@@ -31,9 +29,10 @@ const Shops = () => {
     useEffect(() => {
         dispatch(price_range_product())
     }, [])
+
     useEffect(() => {
         setState({
-            values: [priceRange.low, priceRange.high === priceRange.low ? priceRange.high + 1 : priceRange.hight]
+            values: [priceRange.low, priceRange.high === priceRange.low ? priceRange.high + 1 : priceRange.high]
         })
     }, [priceRange])
 
@@ -44,6 +43,7 @@ const Shops = () => {
             setCategory('')
         }
     }
+
     console.log(category)
     useEffect(() => {
         dispatch(
@@ -56,6 +56,7 @@ const Shops = () => {
                 pageNumber
             })
         )
+
     }, [state.values[0], state.values[1], category, rating, pageNumber, sortPrice])
 
     const resetRating = () => {
@@ -69,6 +70,7 @@ const Shops = () => {
             pageNumber
         }))
     }
+
     return (
         <div>
             <Headers />
@@ -86,6 +88,7 @@ const Shops = () => {
                     </div>
                 </div>
             </section>
+            
             <section className='py-16'>
                 <div className='w-[85%] md:w-[90%%] sm:w-[90%] lg:w-[90%] h-full mx-auto'>
                     <div className={`md:block hidden ${!filter ? 'mb-6' : 'mb-0'}`}>
@@ -107,7 +110,7 @@ const Shops = () => {
                                 <Range
                                     step={1}
                                     min={priceRange.low}
-                                    max={priceRange.high === priceRange.low ? priceRange.high + 1 : priceRange.hight}
+                                    max={priceRange.high === priceRange.low ? priceRange.high + 1 : priceRange.high}
                                     values={state.values}
                                     onChange={(values) => setState({ values })}
                                     renderTrack={({ props, children }) => (

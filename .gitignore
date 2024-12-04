@@ -3,3 +3,5 @@
 /client/node_modules
 ./backend/env
 ./backend/.env
+./backend/controllers/runpass.js
+./backend/controllers/runpass
