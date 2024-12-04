@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { Package } from 'lucide-react';
+
 import {
   get_card_products,
   get_wishlist_products,
@@ -98,9 +100,9 @@ const Headers = () => {
           </div>
           <button
             onClick={search}
-            className="bg-white nex_button button_100 font-semibold text-white"
+            className="flex items-center bg-white nex_button button_100 font-semibold text-white hover:bg-white hover:text-black"
           >
-            Sell online
+            Sell online  <Package className="ml-2" size={24} />
           </button>
         </div>
       </div>

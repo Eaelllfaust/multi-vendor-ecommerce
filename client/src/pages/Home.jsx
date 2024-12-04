@@ -20,9 +20,7 @@ const Home = () => {
             <Banner />
             <div className='my-4'>
                 <Categorys />
-                
             </div>
-
             <div className='py-[45px]'>
                 <FeatureProducts products={products} />
             </div>

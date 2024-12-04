@@ -52,9 +52,8 @@ const FeatureProducts = ({ products }) => {
     return (
         <div className='w-[85%] flex flex-wrap mx-auto'>
             <div className='w-full'>
-                <div className='text-center flex justify-center items-center flex-col text-4xl text-slate-600 font-bold relative pb-[45px]'>
-                    <h2>Feature Products</h2>
-                    <div className='w-[100px] h-[4px] bg-[#7fad39] mt-4'></div>
+                <div className='text-4xl text-white font-bold relative pb-[45px]'>
+                    <h2>Top rated products</h2>
                 </div>
             </div>
             <div className='w-full grid grid-cols-4 md-lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6'>
