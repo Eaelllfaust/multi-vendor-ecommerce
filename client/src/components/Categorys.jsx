@@ -40,7 +40,6 @@ const Categorys = () => {
     }
     return (
         <div className='w-[87%] mx-auto relative'>
-             <h1 className='text-center text-lg text-white'>All categories</h1>
             <Carousel
                 autoPlay={true}
                 infinite={true}
@@ -49,8 +48,8 @@ const Categorys = () => {
                 transitionDuration={500}
             >
                 {
-                    categorys.map((c, i) => <Link className='h-[185px]  block' key={i} to={`/products?category=${c.name}`}>
-                        <div className='w-full h-full p-3'>
+                    categorys.map((c, i) => <Link className='h-[200px]  block' key={i} to={`/products?category=${c.name}`}>
+                        <div className='w-full h-full p-2'>
                             <img src={c.image} alt="image" className='nex_border_sm' />
                             <div className=' w-full mx-auto font-bold left-0 flex justify-center items-center my-5'>
                                 <span className=' rounded-full py-[2px] px-6 bg-[#FFE11B] text-black'>{c.name}</span>
